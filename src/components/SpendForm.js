@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
 
 
-const Form = () => {
+const SpendForm = () => {
     const [fecId, setFecId] = useState("");
     const [candidate, getCandidate] = useState([]);
 
-    const urlBase = 'https://api.propublica.org/campaign-finance/v1/2020/candidates/'
+    const urlBegin = 'https://api.propublica.org/campaign-finance/v1/2020/candidates/'
 
-    let url = `${urlBase}${fecId}.json`
+    const urlEnd = '/independent_expenditures.json'
 
-    
+    let url = `${urlBegin}${fecId}${urlEnd}`
 
 
     // const CallingAPI = () => {
@@ -28,11 +28,12 @@ const Form = () => {
         return (
         <ul key={index}>
             {/* {console.log(i)} */}
-            <li>{i.name}</li>
-            <li>{i.party}</li>
-            <li>{i.total_from_individuals}</li>
-            <li>{i.total_from_pacs}</li>
-            <li>{i.total_contributions}</li>
+            <li>{i.candidate_name}</li>
+            <li>{i.fec_committee_name}</li>
+            <li>{i.amount}</li>
+            <li>{i.purpose}</li>
+            <li>{i.payee}</li>
+            <li>{i.support_or_oppose}</li>
         </ul>
         )
     })
@@ -59,5 +60,4 @@ const Form = () => {
     )
 }
 
-export default Form;
-
+export default SpendForm;
