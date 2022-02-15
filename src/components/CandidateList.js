@@ -6,7 +6,7 @@ const CandidateList = () => {
     const [spending, getSpending] = useState([]);
   //Need to find a way to access the cycle here (2020) so that multiple cycles can be displayed at once
     useEffect(() => {
-    fetch("https://api.propublica.org/campaign-finance/v1/2016/candidates/P00003392/independent_expenditures.json", {
+    fetch(`https://api.propublica.org/campaign-finance/v1/2020/candidates/P60007168/independent_expenditures.json`, {
         headers: {
           "X-Api-Key": 'n5oTwM9UmrutiH1fyEXMnvxC1BslYogT13YjWAXT'
         }
@@ -20,7 +20,7 @@ const CandidateList = () => {
     const mapData = spending.map((i, index) => {
           return(
             <ul key={index}>
-                <Link to='/names'>{i.support_or_oppose}</Link>
+                <Link to='/names'>{i.candidate_name}</Link>
                 </ul>
         )
     });
