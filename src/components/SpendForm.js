@@ -9,19 +9,19 @@ const SpendForm = () => {
 
     const urlEnd = '/independent_expenditures.json'
 
-    let url = `${urlBegin}${fecId}${urlEnd}`
+    let urlSpending = `${urlBegin}${fecId}${urlEnd}`
 
 
     // const CallingAPI = () => {
         useEffect(() => {
-            fetch(url, {
+            fetch(urlSpending, {
                 headers: {
                   "X-Api-Key": 'n5oTwM9UmrutiH1fyEXMnvxC1BslYogT13YjWAXT'
                 }
               })
                 .then((response)=>response.json())
                 .then((data) => getCandidate(data?.results))
-                .catch(() => console.log('data fetch failure'))
+                .catch(() => console.log('Second data fetch failure'))
             }, [])
     // } 
     const candidateData = candidate?.map((i, index) => {

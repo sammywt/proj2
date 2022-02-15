@@ -1,12 +1,14 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'Source Code Pro', monospace;
+  src: url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
+}
+body {
+  background-color: rgb(229, 240, 239);
 }
 
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-content: space-between;
-  flex-direction: column;
+.App {
+  text-align: center;
+  font-family: 'Source Code Pro', monospace;
 }
 
 ul {
@@ -19,4 +21,13 @@ ul {
   align-content: center;
   flex-direction: column;
   line-height: 45px;
+  margin: 20px; 
+}
+
+form {
+  margin: 20px;
+  background-color: rgb(237, 112, 112);
+  padding: 10px;
+  border: 10px solid rgb(250, 66, 66);
+  border-radius: 10px;
 }
