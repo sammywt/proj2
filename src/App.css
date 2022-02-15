@@ -8,3 +8,15 @@ nav {
   align-content: space-between;
   flex-direction: column;
 }
+
+ul {
+  list-style-type: none;
+  border: 5px solid rgb(106, 106, 232);
+  border-radius: 10px;
+  background-color: rgb(35, 147, 245);
+  color: white;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  line-height: 45px;
+}
