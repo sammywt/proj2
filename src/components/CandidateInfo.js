@@ -7,7 +7,7 @@ const CandidateInfo = (props) => {
    let params = useParams()
     return(
        <ul>
-           <li>ADDRESS: {props.mailing_address}</li>
+           <li>ADDRESS: {params.mailing_address}</li>
        </ul>
     )
 }
