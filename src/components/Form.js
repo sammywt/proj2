@@ -52,7 +52,7 @@ const Form = () => {
             <li>TOTAL FROM INDIVIDUAL DONORS: {i.total_from_individuals}</li>
             <li>TOTAL FROM PACS (Political Action Committees): {i.total_from_pacs}</li>
             <li>TOTAL CONTRIBUTIONS: {i.total_contributions}</li>
-            <li><Link to='/CandidateInfo'>Contact info</Link></li>
+            <li><Link to='/CandidateInfo/'>Contact info</Link></li>
         </ul>
         )
     })
@@ -87,7 +87,7 @@ const Form = () => {
             {expenditureData ? expenditureData : 'NO AVAILABLE DATA'}
 
             <Routes>
-                <Route path='/CandidateInfo/:candidate' element= {<CandidateInfo />} />
+                <Route path='/CandidateInfo/' element= {<CandidateInfo />} />
             </Routes>
 
         </div>
