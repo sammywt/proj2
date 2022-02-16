@@ -2,8 +2,9 @@ import './App.css';
 import {Route, Link, Routes, Navigate } from 'react-router-dom';
 import {useState} from 'react';
 import Form from './components/Form'
-import CandidateInfo from './components/CandidateInfo';
+import CandidateDetails from './components/CandidateDetails';
 import CandidateData from './components/CandidateData';
+import ExpenditureData from './components/ExpenditureData';
 
 
 function App() {
@@ -47,17 +48,33 @@ function App() {
 
   return (
     <div className="App">      
-    <h1>Campaign Finance Tracker</h1>
+    <h1><Link to='/'>Campaign Finance Tracker</Link></h1>
     <hr />
         <a href='https://www.fec.gov/data/candidates/?has_raised_funds=true&is_active_candidate=true' target='_blank' rel="noopener noreferrer">Get FEC ID Number</a>
         <br />
       {/* <Form candidate={candidate} getCandidate={getCandidate} fecId={fecId} setFecId={setFecId} expenditures={expenditures} getExpenditures={getExpenditures} handleSubmit={handleSubmit}/> */}
 
-      <CandidateData candidate={candidate}/>
+      <CandidateData 
+      candidate={candidate}
+      />
+      
       <Routes>
-        <Route path='/' element={<Form candidate={candidate} getCandidate={getCandidate} fecId={fecId} setFecId={setFecId} expenditures={expenditures} getExpenditures={getExpenditures} handleSubmit={handleSubmit}/>} />
-        <Route path='/ContactInfo/'  element= {<CandidateInfo candidate={candidate}/>} />
+        <Route path='/' element={<Form 
+        getCandidate={getCandidate} 
+        fecId={fecId} 
+        setFecId={setFecId} 
+        expenditures={expenditures} 
+        getExpenditures={getExpenditures} 
+        handleSubmit={handleSubmit}
+        />} />
+        <Route path='/ContactInfo/'  
+        element= {<CandidateDetails 
+        candidate={candidate}
+        />} />
       </Routes>
+      <ExpenditureData 
+      expenditures={expenditures} 
+      />
     </div>
   );
 }

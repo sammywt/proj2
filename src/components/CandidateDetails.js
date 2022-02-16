@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Params, useParams } from "react-router";
 
 //referencing candidate from Form.js, specifically referencing data instead of using props- destructuring
-const CandidateInfo = ({candidate}) => {
+const CandidateDetails = ({candidate}) => {
    console.log(candidate)
     return(
         
@@ -21,7 +21,7 @@ const CandidateInfo = ({candidate}) => {
 
 //props is getting data from candidate={candidate} in Form.js, on line 89- this is referncing the state being set on line 12
 
-export default CandidateInfo;
+export default CandidateDetails;
 
 //useParams() comes from the URL, to be used whe trying to pass data down from the URL directly- Whatever comes after : in the route path=' '
 //EX: Route path='something/:param/ Also must be passed down in link

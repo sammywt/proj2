@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import CandidateInfo from "./CandidateInfo";
+import CandidateInfo from "./CandidateDetails";
 import { Route } from "react-router";
 import { Routes } from "react-router";
 import { Navigate } from "react-router";
@@ -8,7 +8,7 @@ import ExpenditureInfo from "./ExpenditureInfo";
 
 
 
-const Form = ({fecId, setFecId, expenditures, handleSubmit}) => {
+const Form = ({fecId, setFecId, handleSubmit}) => {
     // const [fecId, setFecId] = useState("");
     // const [candidate, getCandidate] = useState([]);
     // const [expenditures, getExpenditures] = useState([]);
@@ -60,14 +60,14 @@ const Form = ({fecId, setFecId, expenditures, handleSubmit}) => {
     //     )
     // })
 
-    const expenditureData = expenditures?.map((i, index) => {
-        return (
-            <ul key={index}>
-                <li>PURPOSE: {i.purpose}</li>
-                <p><Link to={'/ExpenditureDetails'}>details</Link></p>
-            </ul>
-        )
-    });
+    // const expenditureData = expenditures?.map((i, index) => {
+    //     return (
+    //         <ul key={index}>
+    //             <li>PURPOSE: {i.purpose}</li>
+    //             <p><Link to={'/ExpenditureDetails'}>details</Link></p>
+    //         </ul>
+    //     )
+    // });
 
     
     // console.log(candidate);
@@ -94,7 +94,7 @@ const Form = ({fecId, setFecId, expenditures, handleSubmit}) => {
             {/* </Routes> */}
             {/* passing {candidate} down to candidateInfo.js by naming it candidate */}
 
-            {expenditureData ? expenditureData : 'NO AVAILABLE DATA'}
+            {/* {expenditureData ? expenditureData : 'NO AVAILABLE DATA'} */}
 
          
 

@@ -1,7 +1,7 @@
 
 
 
-const ExpenditureInfo = ({expenditures}) => {
+const ExpenditureDetails = ({expenditures}) => {
     console.log(expenditures)
     return (
         <ul>
@@ -10,4 +10,4 @@ const ExpenditureInfo = ({expenditures}) => {
     )
 }
 
-export default ExpenditureInfo;
+export default ExpenditureDetails;

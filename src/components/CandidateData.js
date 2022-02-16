@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 
 const CandidateData = ({candidate}) => {
     // console.log(candidate[0])
@@ -12,6 +12,9 @@ const CandidateData = ({candidate}) => {
                 <li>TOTAL FROM INDIVIDUAL DONORS: {i.total_from_individuals}</li>
                 <li>TOTAL FROM PACS (Political Action Committees): {i.total_from_pacs}</li>
                 <li>TOTAL CONTRIBUTIONS: {i.total_contributions}</li>
+                <p>
+                <Link to={'/ContactInfo/'}>Contact info</Link>
+                </p>
             </ul>
         ))
     )
