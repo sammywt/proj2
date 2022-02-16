@@ -21,13 +21,21 @@ ul {
   align-content: center;
   flex-direction: column;
   line-height: 45px;
-  margin: 20px; 
+  margin: 20px;
+  z-index: 1; 
 }
 
 form {
   margin: 20px;
   background-color: rgb(237, 112, 112);
   padding: 10px;
-  border: 10px solid rgb(250, 66, 66);
+  border: 5px solid rgb(250, 66, 66);
   border-radius: 10px;
+  z-index: 1;
+}
+
+footer {
+  position: fixed;
+  background-position: 0% 0%;
+  z-index: 2;
 }

@@ -2,14 +2,26 @@ import { useState, useEffect } from "react"
 import { Link } from "react-router-dom";
 import { Params, useParams } from "react-router";
 
-
-const CandidateInfo = (props) => {
-   let params = useParams()
+//referencing candidate from Form.js, specifically referencing data instead of using props- destructuring
+const CandidateInfo = ({candidate}) => {
+   console.log(candidate)
     return(
+        
        <ul>
-           <li>ADDRESS: {params.mailing_address}</li>
+           <li>ADDRESS: {candidate[0].mailing_address}</li>
+           <li>CITY: {candidate[0].mailing_city}</li>
+           <li>STATE: {candidate[0].mailing_state}</li>
+           <li>ZIP: {candidate[0].mailing_zip}</li>
+           <li>WEBSITE: {candidate[0].url}</li>
+           <li>FACEBOOK: {candidate[0].facebook_url}</li>
+           <li>TWITTER HANDLE: {candidate[0].twitter_user}</li>
        </ul>
     )
 }
 
+//props is getting data from candidate={candidate} in Form.js, on line 89- this is referncing the state being set on line 12
+
 export default CandidateInfo;
+
+//useParams() comes from the URL, to be used whe trying to pass data down from the URL directly- Whatever comes after : in the route path=' '
+//EX: Route path='something/:param/ Also must be passed down in link
