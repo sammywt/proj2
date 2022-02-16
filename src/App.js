@@ -49,6 +49,7 @@ function App() {
   return (
     <div className="App">      
     <h1><Link to='/'>Campaign Finance Tracker</Link></h1>
+    <h5>data courtesy of ProPublica</h5>
     <hr />
         <a href='https://www.fec.gov/data/candidates/?has_raised_funds=true&is_active_candidate=true' target='_blank' rel="noopener noreferrer">Get FEC ID Number</a>
         <br />
