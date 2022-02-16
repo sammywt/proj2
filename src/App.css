@@ -40,6 +40,6 @@ footer {
   z-index: 2;
 }
 
-.toggle {
+.notActive {
   display: none;
 }
