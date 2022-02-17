@@ -54,16 +54,14 @@ function App() {
     <h1><Link to='/'>Campaign Finance Tracker</Link></h1>
     <h5>data courtesy of ProPublica</h5>
     <hr />
-        <a href='https://www.fec.gov/data/candidates/?has_raised_funds=true&is_active_candidate=true' target='_blank' rel="noopener noreferrer">Get FEC ID Number</a>
+        <a href='https://www.fec.gov/data/candidates/?has_raised_funds=true&is_active_candidate=true' target='_blank' rel="noopener noreferrer" className='get-FEC'>Get FEC ID Number</a>
         <br />
-      {/* <Form candidate={candidate} getCandidate={getCandidate} fecId={fecId} setFecId={setFecId} expenditures={expenditures} getExpenditures={getExpenditures} handleSubmit={handleSubmit}/> */}
 
       <CandidateData 
       candidate={candidate}
       />
-      
-      <Routes>
-        <Route path='/' element={<Form 
+
+     <Form 
         getCandidate={getCandidate} 
         fecId={fecId} 
         setFecId={setFecId} 
@@ -72,7 +70,9 @@ function App() {
         handleSubmit={handleSubmit}
         cycleYear={cycleYear}
         setCycleYear={setCycleYear}
-        />} />
+        />
+      <Routes>
+       
         <Route path='/ContactInfo/'  
         element= {<CandidateDetails 
         candidate={candidate}

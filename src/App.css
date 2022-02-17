@@ -23,7 +23,6 @@ ul {
   line-height: 45px;
   margin: 20px;
   z-index: 1; 
-  max-width: 500px;
 }
 
 form {
@@ -48,7 +47,7 @@ footer {
 .forms {
   display: flex;
   flex-direction: column;
-  line-height: 4;
+  line-height: 1.5;
   justify-content: center;
   text-align: center;
   align-items: center;
@@ -65,6 +64,21 @@ footer {
   color: white;
 }
 
+.get-FEC {
+  text-decoration: none;
+  border: 2px solid rgb(250, 66, 66);
+  background-color: rgb(237, 112, 112);
+  border-radius: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: white
+}
+
 a {
   text-decoration: none;
+  color:rgb(6, 6, 6)
+}
+
+.text-input {
+  border-radius: 8px;
 }
