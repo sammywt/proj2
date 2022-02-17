@@ -7,7 +7,6 @@ const SingleExpenditure = ({i}) => {
         setActive(!isActive);
     }
     return (
-        // expenditures.map((i, index) => (
         <ul>
         <li>PURPOSE: {i.purpose}</li>
         <p onClick={ToggleClass}>details</p>

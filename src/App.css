@@ -3,7 +3,8 @@
   src: url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
 }
 body {
-  background-color: rgb(229, 240, 239);
+  background-color: rgb(37, 41, 41);
+  color: white;
 }
 
 .App {
@@ -13,31 +14,23 @@ body {
 
 ul {
   list-style-type: none;
-  border: 5px solid rgb(106, 106, 232);
+  border: 3px solid rgb(8, 54, 95);
   border-radius: 10px;
-  background-color: rgb(35, 147, 245);
+  background-color: rgb(12, 88, 155);
   color: white;
   display: flex;
   align-content: center;
   flex-direction: column;
-  line-height: 45px;
-  margin: 20px;
-  z-index: 1; 
+  line-height: 1.2;
+ 
 }
 
 form {
   margin: 20px;
-  background-color: rgb(237, 112, 112);
+  background-color: rgb(50, 109, 50);
   padding: 10px;
-  border: 5px solid rgb(250, 66, 66);
+  border: 3px solid rgb(39, 85, 39);
   border-radius: 10px;
-  z-index: 1;
-}
-
-footer {
-  position: fixed;
-  background-position: 0% 0%;
-  z-index: 2;
 }
 
 .notActive {
@@ -60,25 +53,47 @@ footer {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  background-color: rgb(148, 12, 12);
+  background-color: rgb(3, 111, 3);
   color: white;
 }
 
 .get-FEC {
   text-decoration: none;
-  border: 2px solid rgb(250, 66, 66);
-  background-color: rgb(237, 112, 112);
+  border: 2px solid rgb(50, 109, 50);
+  background-color: rgb(39, 85, 39);
   border-radius: 12px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: white
+  padding: 5px;
+  color: white;
 }
 
 a {
   text-decoration: none;
-  color:rgb(6, 6, 6)
+  color:rgb(255, 255, 255)
 }
 
 .text-input {
   border-radius: 8px;
+}
+
+li {
+  list-style-type: none;
+  line-height: 2;
+}
+
+.REP {
+  background-color: rgb(194, 33, 33);
+  border: 2px solid rgb(177, 8, 8);
+}
+
+.DEM {
+  background-color: rgb(12, 88, 155);
+  border: 3px solid rgb(8, 54, 95);
+}
+
+
+@media only screen and (min-width: 1024px) {
+  div {
+    margin-left: 80px;
+    margin-right: 80px;
+  }
 }

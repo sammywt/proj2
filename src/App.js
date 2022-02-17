@@ -5,6 +5,7 @@ import Form from './components/Form'
 import CandidateDetails from './components/CandidateDetails';
 import CandidateData from './components/CandidateData';
 import ExpenditureData from './components/ExpenditureData';
+import AboutProPublica from './components/AboutProPublica';
 
 
 function App() {
@@ -51,36 +52,28 @@ function App() {
 
   return (
     <div className="App">      
-    <h1><Link to='/'>Campaign Finance Tracker</Link></h1>
-    <h5>data courtesy of ProPublica</h5>
-    <hr />
-        <a href='https://www.fec.gov/data/candidates/?has_raised_funds=true&is_active_candidate=true' target='_blank' rel="noopener noreferrer" className='get-FEC'>Get FEC ID Number</a>
+        <h1><Link to='/'>Campaign Finance Tracker</Link></h1>
+        <h5>data courtesy of ProPublica</h5>
+        <h6><Link to='/propublica'>about</Link></h6>
+        <hr />
         <br />
-
-      <CandidateData 
-      candidate={candidate}
-      />
-
-     <Form 
-        getCandidate={getCandidate} 
-        fecId={fecId} 
-        setFecId={setFecId} 
-        expenditures={expenditures} 
-        getExpenditures={getExpenditures} 
-        handleSubmit={handleSubmit}
-        cycleYear={cycleYear}
-        setCycleYear={setCycleYear}
-        />
-      <Routes>
-       
-        <Route path='/ContactInfo/'  
-        element= {<CandidateDetails 
-        candidate={candidate}
-        />} />
-      </Routes>
-      <ExpenditureData 
-      expenditures={expenditures} 
-      />
+        <Routes>
+          <Route path='/' element={<div><CandidateData candidate={candidate} /><Form 
+          getCandidate={getCandidate} 
+          fecId={fecId} 
+          setFecId={setFecId} 
+          expenditures={expenditures} 
+          getExpenditures={getExpenditures} 
+          handleSubmit={handleSubmit}
+          cycleYear={cycleYear}
+          setCycleYear={setCycleYear}
+          /><ExpenditureData expenditures={expenditures}/></div>} />
+          <Route path='/propublica' element= {<AboutProPublica />}/>
+          <Route path='/ContactInfo'  
+          element= {<CandidateDetails 
+          candidate={candidate}
+          />} />
+        </Routes>
     </div>
   );
 }

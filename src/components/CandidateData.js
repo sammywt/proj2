@@ -1,24 +1,31 @@
-import { Link } from "react-router-dom";
+import { Link, Routes, Route} from "react-router-dom";
+import CandidateDetails from "./CandidateDetails";
 
 const CandidateData = ({candidate}) => {
-    // console.log(candidate[0])
-    return (
       
-        candidate?.map((i, index) => (
-            <ul key={index}>
+       const candidateInfo= candidate?.map((i, index) => (
+            <ul key={index} className={i.party==='REP' ? 'REP' : 'DEM'}>
                 <h2>CANDIDATE INFO</h2>
-                <li>NAME: {i.name}</li>
-                <li>PARTY: {i.party}</li>
-                <li>TOTAL FROM INDIVIDUAL DONORS: {i.total_from_individuals}</li>
-                <li>TOTAL FROM PACS (Political Action Committees): {i.total_from_pacs}</li>
-                <li>TOTAL CONTRIBUTIONS: {i.total_contributions}</li>
+                <li>NAME:</li>
+                <li>{i.name}</li>
+                <li>PARTY:</li>
+                <li>{i.party}</li>
+                <li>TOTAL FROM INDIVIDUAL DONORS</li>
+                <li>{i.total_from_individuals}</li>
+                <li>TOTAL FROM PACS (Political Action Committees)</li>
+                <li>{i.total_from_pacs}</li>
+                <li>TOTAL CONTRIBUTIONS</li>
+                <li>{i.total_contributions}</li>
                 <p>
-                <Link to={'/ContactInfo/'}>Contact info</Link>
+                <Link to={'/ContactInfo'}>Contact info</Link>
                 </p>
             </ul>
         ))
+        return (
+            <div>
+                {candidateInfo}
+            </div>
     )
-    
 }
 
 export default CandidateData;

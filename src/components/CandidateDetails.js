@@ -5,8 +5,7 @@ import { Params, useParams } from "react-router";
 //referencing candidate from Form.js, specifically referencing data instead of using props- destructuring
 const CandidateDetails = ({candidate}) => {
    console.log(candidate)
-    return(
-        
+    return(  
        <ul>
            <li>ADDRESS: {candidate[0].mailing_address}</li>
            <li>CITY: {candidate[0].mailing_city}</li>

@@ -1,11 +1,7 @@
-import { Link } from "react-router-dom"
-import ExpenditureDetails from "./ExpenditureInfo";
-import { useState } from "react";
 import SingleExpenditure from "./SingleExpenditure";
 
 
 const ExpenditureData = ({expenditures}) => {
-  
     return (
         expenditures.map((i, index) => (
           <SingleExpenditure i={i} key={index}/>
