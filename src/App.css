@@ -23,6 +23,7 @@ ul {
   line-height: 45px;
   margin: 20px;
   z-index: 1; 
+  max-width: 500px;
 }
 
 form {
@@ -42,4 +43,28 @@ footer {
 
 .notActive {
   display: none;
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
+  line-height: 4;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.button {
+  width: 100px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgb(148, 12, 12);
+  color: white;
+}
+
+a {
+  text-decoration: none;
 }

@@ -10,17 +10,20 @@ import ExpenditureData from './components/ExpenditureData';
 function App() {
 
   const [fecId, setFecId] = useState("");
+  const [cycleYear, setCycleYear] = useState("");
   const [candidate, getCandidate] = useState([]);
   const [expenditures, getExpenditures] = useState([]);
 
 
-  const urlBase = 'https://api.propublica.org/campaign-finance/v1/2020/candidates/'
+  const urlBase = 'https://api.propublica.org/campaign-finance/v1/'
 
-  let url = `${urlBase}${fecId}.json`
+  const urlMiddle = '/candidates/';
+
+  let url = `${urlBase}${cycleYear}${urlMiddle}${fecId}.json`
 
   const urlEnd = '/independent_expenditures.json'
 
-  let urlSpending = `${urlBase}${fecId}${urlEnd}`
+  let urlSpending = `${urlBase}${cycleYear}${urlMiddle}${fecId}${urlEnd}`
   
       const handleSubmit = (e) => {
           e.preventDefault();
@@ -67,6 +70,8 @@ function App() {
         expenditures={expenditures} 
         getExpenditures={getExpenditures} 
         handleSubmit={handleSubmit}
+        cycleYear={cycleYear}
+        setCycleYear={setCycleYear}
         />} />
         <Route path='/ContactInfo/'  
         element= {<CandidateDetails 
