@@ -25,7 +25,9 @@ ul {
   word-wrap: break-word;
   line-height: 1.5;
 }
-
+li{
+  line-height: 1.5;
+}
 form {
   margin-top: 20px;
   padding: 10px;

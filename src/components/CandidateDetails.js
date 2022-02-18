@@ -11,8 +11,8 @@ const CandidateDetails = ({candidate}) => {
            <li>CITY: {candidate[0].mailing_city}</li>
            <li>STATE: {candidate[0].mailing_state}</li>
            <li>ZIP: {candidate[0].mailing_zip}</li>
-           <li>WEBSITE: {candidate[0].url}</li>
-           <li>FACEBOOK: {candidate[0].facebook_url}</li>
+           <li>WEBSITE: <a href={candidate[0].url} target='_blank' rel="noopener noreferrer" >{candidate[0].url}</a></li>
+           <li>FACEBOOK: <a href={candidate[0].facebook_url} target='_blank' rel="noopener noreferrer" >{candidate[0].facebook_url}</a></li>
            <li>TWITTER HANDLE: {candidate[0].twitter_user}</li>
        </ul>
     )
