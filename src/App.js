@@ -6,6 +6,7 @@ import CandidateDetails from './components/CandidateDetails';
 import CandidateData from './components/CandidateData';
 import ExpenditureData from './components/ExpenditureData';
 import AboutProPublica from './components/AboutProPublica';
+import FetchFailure from './components/FetchFailure';
 
 
 function App() {
@@ -36,7 +37,7 @@ function App() {
             })
               .then((response)=>response.json())
               .then((data) => getCandidate(data.results))
-              .catch(() => console.log('data fetch failure'));
+              .catch(() => {<FetchFailure />});
 
               fetch(urlSpending, {
                   headers: {

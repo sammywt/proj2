@@ -7,7 +7,7 @@ const SingleExpenditure = ({i}) => {
         setActive(!isActive);
     }
     return (
-        <ul className='spend-list'>
+        <ul className={i.support_or_oppose==='O' ? 'OPP' : 'SUP'}>
             <li>PURPOSE: {i.purpose}</li>
             <p onClick={ToggleClass}>details</p>
             <div className={isActive ? 'active' : 'notActive'}>

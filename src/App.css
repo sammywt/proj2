@@ -81,14 +81,24 @@ a {
   border: 3px solid rgb(8, 54, 95);
 }
 
+.OPP {
+  background-color: rgb(0, 0, 0);
+  border: 2px solid white;
+}
+
 @media only screen and (min-width: 768px) {
   .App {
     margin-left: 60px;
     margin-right: 60px;
   }
 
- .REP .DEM {
-  margin: 100px;
+ .REP, .DEM {
+  margin: 20px 90px;
+ }
+
+ .OPP, .SUP {
+   width: 225px;
+   padding: 5px;
  }
 
   .spend-cards {
@@ -103,9 +113,8 @@ a {
     margin-left: 80px;
     margin-right: 80px;
   }
-
-  .spend-list {
-    width: 300px;
-
-  }
+ .REP, .DEM {
+   margin: 20px 120px;
+ }
+ 
 } 
