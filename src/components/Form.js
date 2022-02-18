@@ -23,7 +23,7 @@ const Form = ({fecId, setFecId, handleSubmit, cycleYear, setCycleYear}) => {
                 />
             <input className='button'
             type='submit'
-            value='$'
+            value='$$$'
             />
             </form>  
              

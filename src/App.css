@@ -80,14 +80,21 @@ a {
   background-color: rgb(12, 88, 155);
   border: 3px solid rgb(8, 54, 95);
 }
-/*
+
 @media only screen and (min-width: 768px) {
   .App {
     margin-left: 60px;
     margin-right: 60px;
   }
-  .spend-list {
-    width: 500px;
+
+ .REP .DEM {
+  margin: 100px;
+ }
+
+  .spend-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
@@ -96,4 +103,9 @@ a {
     margin-left: 80px;
     margin-right: 80px;
   }
-} */
+
+  .spend-list {
+    width: 300px;
+
+  }
+} 
