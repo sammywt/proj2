@@ -2,13 +2,15 @@ import SingleExpenditure from "./SingleExpenditure";
 
 
 const ExpenditureData = ({expenditures}) => {
-    return (
-        expenditures.map((i, index) => (
-          <SingleExpenditure i={i} key={index}/>
+        const mapExpend = expenditures.map((i, index) => (
+          <SingleExpenditure i={i} key={index} />
         ))
+
+    return(
+      <div className='spend-cards'>
+        {mapExpend}
+      </div>
     )
 }
 
 export default ExpenditureData;
-
-//https://devdojo.com/krissanawat101/3-ways-for-toggle-a-class-in-react`

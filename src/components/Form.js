@@ -6,7 +6,7 @@ const Form = ({fecId, setFecId, handleSubmit, cycleYear, setCycleYear}) => {
         <div>
              <a href='https://www.fec.gov/data/candidates/?has_raised_funds=true&is_active_candidate=true' target='_blank' rel="noopener noreferrer" className='get-FEC'>Get FEC ID Number</a>
         <br />
-            <form className='forms' onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
             <label>Enter candidate FEC ID</label>
                 <input className='text-input'
                 type = "text" 
@@ -21,9 +21,9 @@ const Form = ({fecId, setFecId, handleSubmit, cycleYear, setCycleYear}) => {
                 value={cycleYear}
                 onChange={(e) => setCycleYear(e.target.value)} 
                 />
-                <br />
             <input className='button'
             type='submit'
+            value='$'
             />
             </form>  
              

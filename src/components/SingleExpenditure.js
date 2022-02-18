@@ -7,17 +7,18 @@ const SingleExpenditure = ({i}) => {
         setActive(!isActive);
     }
     return (
-        <ul>
-        <li>PURPOSE: {i.purpose}</li>
-        <p onClick={ToggleClass}>details</p>
-        <div className={isActive ? 'active' : 'notActive'}>
-            <li>AMOUNT: {i.amount}</li>
+        <ul className='spend-list'>
             <li>PURPOSE: {i.purpose}</li>
-            <li>RECIPIENT: {i.payee}</li>
-            <li>SUPPORT OR OPPOSE: {i.support_or_oppose}</li>
-        </div>
-    </ul>
-)
+            <p onClick={ToggleClass}>details</p>
+            <div className={isActive ? 'active' : 'notActive'}>
+                <li>AMOUNT: {i.amount}</li>
+                <li>PURPOSE: {i.purpose}</li>
+                <li>RECIPIENT: {i.payee}</li>
+                <li>SUPPORT OR OPPOSE: {i.support_or_oppose}</li>
+            </div>
+        </ul>
+    )
 }
 
 export default SingleExpenditure;
+//https://devdojo.com/krissanawat101/3-ways-for-toggle-a-class-in-react`
