@@ -11,6 +11,7 @@ const SingleExpenditure = ({i}) => {
             <li>PURPOSE: {i.purpose}</li>
             <p onClick={ToggleClass}>details</p>
             <div className={isActive ? 'active' : 'notActive'}>
+                <li>COMMITTEE: {i.fec_committee_name}</li>
                 <li>AMOUNT: {i.amount}</li>
                 <li>PURPOSE: {i.purpose}</li>
                 <li>RECIPIENT: {i.payee}</li>

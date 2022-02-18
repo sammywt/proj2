@@ -3,7 +3,7 @@
   src: url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
 }
 body {
-  background-color: rgb(37, 41, 41);
+  background-color: rgb(28, 28, 28);
   color: white;
 }
 
@@ -18,8 +18,7 @@ ul {
   list-style-type: none;
   border-radius: 10px;
   color: white;
-  background-color: rgb(50, 109, 50);
-  border: 1.5px solid rgb(39, 85, 39);
+  background-color: rgb(42, 91, 42);
   text-align: center;
   padding: 5px 0px;
   word-wrap: break-word;
@@ -55,16 +54,16 @@ form {
 
 .get-FEC {
   text-decoration: none;
-  border: 2px solid rgb(48, 48, 48);
+  border: 1px solid rgb(48, 48, 48);
   background-color: rgb(23, 22, 22);
   border-radius: 12px;
   padding: 2px 8px;
-  color: white;
+  color: rgb(187, 187, 187);
 }
 
 a {
   text-decoration: none;
-  color: rgb(143, 143, 143)
+  color: rgb(184, 184, 184)
 }
 
 .text-input {
@@ -73,7 +72,7 @@ a {
 
 .REP {
   background-color: rgb(194, 33, 33);
-  border: 2px solid rgb(177, 8, 8);
+  border: 1px solid rgb(177, 8, 8);
 }
 
 .DEM {
@@ -83,7 +82,7 @@ a {
 
 .OPP {
   background-color: rgb(0, 0, 0);
-  border: 2px solid white;
+  border: 1px solid white;
 }
 
 @media only screen and (min-width: 768px) {

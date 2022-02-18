@@ -6,7 +6,6 @@ import CandidateDetails from './components/CandidateDetails';
 import CandidateData from './components/CandidateData';
 import ExpenditureData from './components/ExpenditureData';
 import AboutProPublica from './components/AboutProPublica';
-import FetchFailure from './components/FetchFailure';
 
 
 function App() {
@@ -16,28 +15,22 @@ function App() {
   const [candidate, getCandidate] = useState([]);
   const [expenditures, getExpenditures] = useState([]);
 
-
   const urlBase = 'https://api.propublica.org/campaign-finance/v1/'
-
   const urlMiddle = '/candidates/';
-
   let url = `${urlBase}${cycleYear}${urlMiddle}${fecId}.json`
-
   const urlEnd = '/independent_expenditures.json'
-
   let urlSpending = `${urlBase}${cycleYear}${urlMiddle}${fecId}${urlEnd}`
   
       const handleSubmit = (e) => {
           e.preventDefault();
-          
           fetch(url, {
               headers: {
                 "X-Api-Key": 'n5oTwM9UmrutiH1fyEXMnvxC1BslYogT13YjWAXT'
               }
             })
               .then((response)=>response.json())
-              .then((data) => getCandidate(data.results))
-              .catch(() => {<FetchFailure />});
+              .then((data) => getCandidate(data?.results))
+              .catch(() => console.log('Failure'));
 
               fetch(urlSpending, {
                   headers: {
