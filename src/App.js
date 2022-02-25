@@ -1,12 +1,11 @@
 import './App.css';
-import {Route, Link, Routes, Navigate } from 'react-router-dom';
+import { Route, Link, Routes } from 'react-router-dom';
 import {useState} from 'react';
 import Form from './components/Form'
 import CandidateDetails from './components/CandidateDetails';
 import CandidateData from './components/CandidateData';
 import ExpenditureData from './components/ExpenditureData';
 import AboutProPublica from './components/AboutProPublica';
-
 
 function App() {
 
@@ -30,7 +29,7 @@ function App() {
             })
               .then((response)=>response.json())
               .then((data) => getCandidate(data?.results))
-              .catch(() => console.log('Failure'));
+              .catch(() => console.log('Data fetch failure'));
 
               fetch(urlSpending, {
                   headers: {

@@ -1,11 +1,8 @@
-import { Link } from "react-router-dom";
 
 const Form = ({fecId, setFecId, handleSubmit, cycleYear, setCycleYear}) => {
    
     return(
-        <div>
-             <a href='https://www.fec.gov/data/candidates/?has_raised_funds=true&is_active_candidate=true' target='_blank' rel="noopener noreferrer" className='get-FEC'>Get FEC ID Number</a>
-        <br />
+        <div>    
             <form onSubmit={handleSubmit}>
             <label>Enter candidate FEC ID</label>
                 <input className='text-input'
