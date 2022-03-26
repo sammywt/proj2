@@ -6,39 +6,54 @@ import CandidateDetails from './components/CandidateDetails';
 import CandidateData from './components/CandidateData';
 import ExpenditureData from './components/ExpenditureData';
 import AboutProPublica from './components/AboutProPublica';
+// import './.env';
 
 function App() {
-
+  console.log(process.env.REACT_APP_API_KEY)
   const [fecId, setFecId] = useState("");
   const [cycleYear, setCycleYear] = useState("");
   const [candidate, getCandidate] = useState([]);
   const [expenditures, getExpenditures] = useState([]);
 
+  //consider adding network logic (API call) into its own file and passing it here (lines 18-46)
   const urlBase = 'https://api.propublica.org/campaign-finance/v1/'
   const urlMiddle = '/candidates/';
   let url = `${urlBase}${cycleYear}${urlMiddle}${fecId}.json`
   const urlEnd = '/independent_expenditures.json'
   let urlSpending = `${urlBase}${cycleYear}${urlMiddle}${fecId}${urlEnd}`
   
-      const handleSubmit = (e) => {
+      const handleSubmit = async (e) => {
           e.preventDefault();
-          fetch(url, {
+          //can create and set state to is processing
+          await fetch(url, {
+            //turn headers into a variable to call
               headers: {
-                "X-Api-Key": 'n5oTwM9UmrutiH1fyEXMnvxC1BslYogT13YjWAXT'
+                "X-Api-Key": process.env.REACT_APP_API_KEY
               }
             })
               .then((response)=>response.json())
               .then((data) => getCandidate(data?.results))
-              .catch(() => console.log('Data fetch failure'));
+              .then(() =>{
+                fetch(urlSpending, {
+                headers: {
+                  "X-Api-Key": process.env.REACT_APP_API_KEY
+                }
+              })
+                .then((response)=>response.json())
+                .then((data) => getExpenditures(data?.results))
+                .catch(() => console.log('Second data fetch failure'))
+            })
+                .catch(() => console.log('Data fetch failure'))
+              
 
-              fetch(urlSpending, {
-                  headers: {
-                    "X-Api-Key": 'n5oTwM9UmrutiH1fyEXMnvxC1BslYogT13YjWAXT'
-                  }
-                })
-                  .then((response)=>response.json())
-                  .then((data) => getExpenditures(data?.results))
-                  .catch(() => console.log('Second data fetch failure'))
+              // fetch(urlSpending, {
+              //     headers: {
+              //       "X-Api-Key": 'n5oTwM9UmrutiH1fyEXMnvxC1BslYogT13YjWAXT'
+              //     }
+              //   })
+              //     .then((response)=>response.json())
+              //     .then((data) => getExpenditures(data?.results))
+              //     .catch(() => console.log('Second data fetch failure'))
 
       }
 

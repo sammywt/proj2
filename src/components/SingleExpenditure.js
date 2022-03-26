@@ -7,15 +7,15 @@ const SingleExpenditure = ({i}) => {
         setActive(!isActive);
     }
     return (
-        <ul className={i.support_or_oppose==='O' ? 'OPP' : 'SUP'}>
-            <li>PURPOSE: {i.purpose}</li>
+        <ul className={i?.support_or_oppose==='O' ? 'OPP' : 'SUP'}>
+            <li>PURPOSE: {i?.purpose}</li>
             <p onClick={ToggleClass}>details</p>
             <div className={isActive ? 'active' : 'notActive'}>
-                <li>COMMITTEE: {i.fec_committee_name}</li>
-                <li>AMOUNT: {i.amount}</li>
-                <li>PURPOSE: {i.purpose}</li>
-                <li>RECIPIENT: {i.payee}</li>
-                <li>SUPPORT OR OPPOSE: {i.support_or_oppose}</li>
+                <li>COMMITTEE: {i?.fec_committee_name}</li>
+                <li>AMOUNT: {i?.amount}</li>
+                <li>PURPOSE: {i?.purpose}</li>
+                <li>RECIPIENT: {i?.payee}</li>
+                <li>SUPPORT OR OPPOSE: {i?.support_or_oppose}</li>
             </div>
         </ul>
     )
